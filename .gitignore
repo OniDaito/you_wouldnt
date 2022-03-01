@@ -1,0 +1,4 @@
+*.tap
+*.bin
+__pycache__
+*.pyc
