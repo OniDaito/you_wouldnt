@@ -51,16 +51,14 @@ for y in range(img.height):
     if img.width % 8 != 0:
         width += 8
 
-    # Make it an even number of blocks
-    if (width / 8) % 2 != 0:
-        width += 8
-
     for x in range(0, width, 8):
         block = 0
+
         for b in range(8):
             val = 0
+
             if x + b < img.width:
-            # Assuming input image is greyscale for now
+                # Assuming input image is greyscale for now
                 val, _, _ = img.getpixel((x + b, y))
            
             if val != 0:
