@@ -63,9 +63,10 @@ clearscreen:
 	LD BC,6144			; Length of bitmap memory to clear
 	LD (HL),0			; Set the first byte to 0
 	LDIR				; Copy this byte to the second, and so on
-	LD BC,767			; Length of attribute memory, less one to clear
-	LD (HL),A			; Set the first byte to A
-	LDIR				; Copy this byte to the second, and so on
+    ; For some reason, these lines don't work with this?
+	;LD BC,767			; Length of attribute memory, less one to clear
+	;LD (HL),A			; Set the first byte to A
+	;LDIR				; Copy this byte to the second, and so on
 	RET
 
 ; pause for sometime

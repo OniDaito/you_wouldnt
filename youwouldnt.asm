@@ -1,16 +1,47 @@
-; A bitmap test program
+; You Wouldn't. A ZX Spectrum Demo
 org $8000
-
+; Some handy screen constants we might need
 include "./lib/constants.asm"
 
 start
+    ; the main scene with the various timings
     ld a, black | white | bright
     call cls_attributes
-    ; Set all the memory locations for drawing 'you'
+    call clearscreen
+    call pausescene
+    call pausescene
     call scene01
     call pausescene
+    call pausescene
+    call pausescene
+    call pausescene
+    call pausescene
     call clearscreen
+    call pausescene
+    call pausescene
     call scene02
+    call pausescene
+    call pausescene
+    call pausescene
+    call pausescene
+    call pausescene
+    call clearscreen
+    call pausescene
+    call pausescene
+    call scene03
+    call pausescene
+    call pausescene
+    call pausescene
+    call pausescene
+    call pausescene
+    call clearscreen
+    call pausescene
+    call pausescene
+    call scene04
+    call pausescene
+    call pausescene
+    call pausescene
+    call pausescene
     call pausescene
     call clearscreen
     ret
@@ -25,11 +56,16 @@ cls_attributes:
     ldir                            ; fill the attributes
     ret
 
+; Load the scenes
 include "./scene_shared.asm"
 include "./scene_01.asm"
 include "./scene_02.asm"
+include "./scene_03.asm"
+include "./scene_04.asm"
+; Load the library functions
 include "./lib/upde.asm"
 include "./lib/draw_bitmap.asm"
+; Load in the images
 include "./images/you.asm"
 include "./images/wouldnt.asm"
 include "./images/rclick.asm"
