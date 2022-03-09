@@ -8,42 +8,57 @@ start
     ld a, black | white | bright
     call cls_attributes
     call clearscreen
-    call pausescene
-    call pausescene
-    call scene01
-    call pausescene
-    call pausescene
-    call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call scene01
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call clearscreen
+    ;call pausescene
+    ;call pausescene
+    ;call scene02
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call clearscreen
+    ;call pausescene
+    ;call pausescene
+    ;call scene03
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call clearscreen
+    ;call pausescene
+    ;call pausescene
+    ;call scene04
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call pausescene
+    ;call clearscreen
+    ;call pausescene
+    ;call pausescene
+    call scene05
     call pausescene
     call pausescene
     call clearscreen
     call pausescene
     call pausescene
-    call scene02
-    call pausescene
-    call pausescene
-    call pausescene
+    call scene06
     call pausescene
     call pausescene
     call clearscreen
     call pausescene
     call pausescene
-    call scene03
-    call pausescene
-    call pausescene
-    call pausescene
-    call pausescene
-    call pausescene
-    call clearscreen
-    call pausescene
-    call pausescene
-    call scene04
-    call pausescene
-    call pausescene
-    call pausescene
-    call pausescene
-    call pausescene
-    call clearscreen
+    call scene07
     ret
 
 ; This sets attributes for the whole screen
@@ -62,6 +77,9 @@ include "./scene_01.asm"
 include "./scene_02.asm"
 include "./scene_03.asm"
 include "./scene_04.asm"
+include "./scene_05.asm"
+include "./scene_06.asm"
+include "./scene_07.asm"
 ; Load the library functions
 include "./lib/upde.asm"
 include "./lib/draw_bitmap.asm"
@@ -79,3 +97,11 @@ include "./images/ape.asm"
 include "./images/funge.asm"
 include "./images/a.asm"
 include "./images/token.asm"
+include "./images/screenshot.asm"
+include "./images/is.asm"
+include "./images/theft.asm"
+include "./images/isagainst.asm"
+include "./images/thelaw.asm"
+include "./images/piracy.asm"
+include "./images/itsa.asm"
+include "./images/crime.asm"

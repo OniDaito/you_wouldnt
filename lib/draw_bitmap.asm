@@ -10,6 +10,8 @@ image_offx:
     defb 0
 image_offy:
     defb 0
+image_rand:
+    defb 0xff
 draw_set_pos:
     ; Call this first to set DE to the correct drawing position.
     ; TODO could be a bug here if offx is 0 to begin with
@@ -37,6 +39,7 @@ draw_bitmap:
 loop_draw_bitmap:
     ; Now draw the next block of 8 pixels
     ld a, (bc)
+    ;and image_rand
     ld (de), a
     inc bc
     inc de

@@ -56,6 +56,26 @@ draw_an:
     call draw_bitmap
     ret
 
+draw_theft_centre:
+    ld a, (image_theft_width)
+    ld (image_width), a
+    ld a, (image_theft_height)
+    ld (image_height), a
+    ld a, (image_theft_x)
+    ld (image_x), a
+    ld a, (image_theft_y)
+    ld (image_y), a
+    ld a, 6 ; offset in X in blocks
+    ld (image_offx), a
+    ld a, 60
+    ld (image_offy), a ; offset in Y in lines
+    ld de, 0x4000 ; load de with the screen memory positions first
+    call draw_set_pos
+    ld bc, image_theft ; load the bc with the image data
+    ; Now make the call
+    call draw_bitmap
+    ret
+
 ; https://github.com/breakintoprogram/lib-spectrum/blob/master/lib/output.z80
 clearscreen:		
 	LD HL,16384			; Start address of screen bitmap
@@ -80,4 +100,8 @@ pauseloop:
     ld a, c
     cp 0
     jr nz, pauseloop
+    ret
+pauseword:
+    ld bc, 30000
+    call pauseloop
     ret
