@@ -17,9 +17,10 @@ draw_screenshotting:
     ld bc, image_screenshot ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
-    call pauseword
-    call pauseword
-    call pauseword
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
     call clearscreen
 draw_an_centre:
     ld a, (image_an_width)
@@ -39,9 +40,9 @@ draw_an_centre:
     ld bc, image_an ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
-    call pauseword
-    call pauseword
-    call pauseword
+    call advance_music
+    call advance_music
+    call advance_music
     call clearscreen
 draw_nft_centre:
     ld a, (image_nft_width)
@@ -61,9 +62,9 @@ draw_nft_centre:
     ld bc, image_nft ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
-    call pauseword
-    call pauseword
-    call pauseword
+    call advance_music
+    call advance_music
+    call advance_music
     call clearscreen
 draw_is_centre:
     ld a, (image_is_width)
@@ -83,9 +84,10 @@ draw_is_centre:
     ld bc, image_is ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
-    call pauseword
-    call pauseword
-    call pauseword
+    call advance_music
+    call advance_music
+    call advance_music
     call clearscreen
     call draw_theft_centre
+    call advance_music
     ret

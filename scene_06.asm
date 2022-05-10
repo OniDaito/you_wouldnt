@@ -1,8 +1,9 @@
 scene06:
     call draw_theft_centre
-    call pauseword
-    call pauseword
-    call pauseword
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
     call clearscreen
 draw_isagainst:
     ld a, (image_isagainst_width)
@@ -22,9 +23,10 @@ draw_isagainst:
     ld bc, image_isagainst ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
-    call pauseword
-    call pauseword
-    call pauseword
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
     call clearscreen
 draw_thelaw:
     ld a, (image_thelaw_width)
@@ -44,4 +46,5 @@ draw_thelaw:
     ld bc, image_thelaw ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
     ret

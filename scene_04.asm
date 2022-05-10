@@ -1,6 +1,8 @@
 scene04:
     call draw_you
+    call advance_music
     call draw_wouldnt
+    call advance_music
 draw_funge:
     ld a, (image_funge_width)
     ld (image_width), a
@@ -19,6 +21,7 @@ draw_funge:
     ld bc, image_funge ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
 draw_a:
     ld a, (image_a_width)
     ld (image_width), a
@@ -37,6 +40,7 @@ draw_a:
     ld bc, image_a ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
 draw_token:
     ld a, (image_token_width)
     ld (image_width), a
@@ -55,4 +59,5 @@ draw_token:
     ld bc, image_token ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
     ret

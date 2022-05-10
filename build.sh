@@ -8,6 +8,8 @@ mkdir ./build
 
 # Build with PASMO
 $PASMO_PATH/pasmo -d -v --bin youwouldnt.asm ./build/youwouldnt.bin
+#$PASMO_PATH/pasmo -d -v --bin music.asm ./build/music.bin
 
 # Build the tap files for tape emulations
 $BIN2TAP_PATH/bin2tap -b ./build/youwouldnt.bin -o ./build/youwouldnt.tap
+#$BIN2TAP_PATH/bin2tap -b ./build/music.bin -o ./build/music.tap

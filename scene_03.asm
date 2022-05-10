@@ -1,6 +1,8 @@
 scene03:
     call draw_you
+    call advance_music
     call draw_wouldnt
+    call advance_music
 draw_phish:
     ld a, (image_phish_width)
     ld (image_width), a
@@ -19,6 +21,7 @@ draw_phish:
     ld bc, image_phish ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
 draw_inthe:
     ld a, (image_inthe_width)
     ld (image_width), a
@@ -37,6 +40,7 @@ draw_inthe:
     ld bc, image_inthe ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
 draw_opensea:
     ld a, (image_opensea_width)
     ld (image_width), a
@@ -55,4 +59,5 @@ draw_opensea:
     ld bc, image_opensea ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
     ret

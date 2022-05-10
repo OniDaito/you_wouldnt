@@ -17,7 +17,8 @@ draw_piracy:
     ld bc, image_piracy ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
-    call pauseword
+    call advance_music
+    call advance_music
 draw_itsa:
     ld a, (image_itsa_width)
     ld (image_width), a
@@ -36,7 +37,7 @@ draw_itsa:
     ld bc, image_itsa ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
-    call pauseword
+    call advance_music
 draw_crime:
     ld a, (image_crime_width)
     ld (image_width), a
@@ -55,5 +56,5 @@ draw_crime:
     ld bc, image_crime ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
-    call pauseword
+    call advance_music
     ret

@@ -1,8 +1,8 @@
 scene01:
     call draw_you
-    call pauseword
+    call advance_music
     call draw_wouldnt
-    call pauseword
+    call advance_music
 draw_rclick:
     ld a, (image_rclick_width)
     ld (image_width), a
@@ -21,9 +21,9 @@ draw_rclick:
     ld bc, image_rclick ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
-    call pauseword
+    call advance_music
     call draw_an
-    call pauseword
+    call advance_music
 draw_nft:
     ld a, (image_nft_width)
     ld (image_width), a
@@ -42,4 +42,5 @@ draw_nft:
     ld bc, image_nft ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
     ret

@@ -8,56 +8,91 @@ start
     ld a, black | white | bright
     call cls_attributes
     call clearscreen
-    ;call pausescene
-    ;call pausescene
-    ;call scene01
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call clearscreen
-    ;call pausescene
-    ;call pausescene
-    ;call scene02
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call clearscreen
-    ;call pausescene
-    ;call pausescene
-    ;call scene03
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call clearscreen
-    ;call pausescene
-    ;call pausescene
-    ;call scene04
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call pausescene
-    ;call clearscreen
-    ;call pausescene
-    ;call pausescene
+    call pausescene
+    call pausescene
+    call start_music
+    call scene01
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call clearscreen
+    call advance_music
+    call advance_music
+    call scene02
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call clearscreen
+    call advance_music
+    call advance_music
+    call advance_music
+    call scene03
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call clearscreen
+    call advance_music
+    call advance_music
+    call scene04
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call clearscreen
+    call advance_music
+    call advance_music
     call scene05
-    call pausescene
-    call pausescene
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
     call clearscreen
-    call pausescene
-    call pausescene
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
     call scene06
-    call pausescene
-    call pausescene
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
     call clearscreen
-    call pausescene
-    call pausescene
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
     call scene07
     ret
 
@@ -80,8 +115,11 @@ include "./scene_04.asm"
 include "./scene_05.asm"
 include "./scene_06.asm"
 include "./scene_07.asm"
+; music
+include "./music.asm"
 ; Load the library functions
 include "./lib/upde.asm"
+include "./lib/sound.asm"
 include "./lib/draw_bitmap.asm"
 ; Load in the images
 include "./images/you.asm"

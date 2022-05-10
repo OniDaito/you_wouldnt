@@ -1,6 +1,8 @@
 scene02:
     call draw_you
+    call advance_music
     call draw_wouldnt
+    call advance_music
 draw_bore:
     ld a, (image_bore_width)
     ld (image_width), a
@@ -19,7 +21,9 @@ draw_bore:
     ld bc, image_bore ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
     call draw_an
+    call advance_music
 draw_ape:
     ld a, (image_ape_width)
     ld (image_width), a
@@ -38,4 +42,5 @@ draw_ape:
     ld bc, image_ape ; load the bc with the image data
     ; Now make the call
     call draw_bitmap
+    call advance_music
     ret
