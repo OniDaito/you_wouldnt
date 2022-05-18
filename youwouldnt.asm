@@ -8,14 +8,21 @@ start
     ld a, black | white | bright
     call cls_attributes
     call clearscreen
-    call pausescene
-    call pausescene
+   	ld hl,noteGS1
+    ld b, 512
+    call bend_loop
     call start_music
     call scene01
     call advance_music
     call advance_music
     call advance_music
     call advance_music
+    call advance_music
+    call advance_music
+    call clearscreen
+    call advance_music
+    call advance_music
+    call draw_mid0
     call advance_music
     call advance_music
     call clearscreen
@@ -30,6 +37,21 @@ start
     call clearscreen
     call advance_music
     call advance_music
+    call draw_mid1
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call advance_music
+    call clearscreen
+    call advance_music
     call advance_music
     call scene03
     call advance_music
@@ -40,6 +62,9 @@ start
     call clearscreen
     call advance_music
     call advance_music
+    call draw_mid2
+    call advance_music
+    call clearscreen
     call scene04
     call advance_music
     call advance_music
@@ -49,23 +74,22 @@ start
     call clearscreen
     call advance_music
     call advance_music
+    ; Should be halfway through the music ideally
+	ld e,250
+    ld hl,0   
+    call noise
+    ld e,250
+    call noise
+    ld e,250
+    call noise
+
     call scene05
     call advance_music
     call advance_music
     call advance_music
     call advance_music
     call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
     call clearscreen
-    call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
     call advance_music
     call advance_music
     call advance_music
@@ -94,6 +118,12 @@ start
     call advance_music
     call advance_music
     call scene07
+    ;ld hl,noteG0
+    ;ld b, 512
+    ;call bend_loop
+    ;ld e,250
+    ;ld hl,0   
+    ;call noise
     ret
 
 ; This sets attributes for the whole screen
@@ -115,6 +145,7 @@ include "./scene_04.asm"
 include "./scene_05.asm"
 include "./scene_06.asm"
 include "./scene_07.asm"
+include "./scene_mid.asm"
 ; music
 include "./music.asm"
 ; Load the library functions
@@ -143,3 +174,9 @@ include "./images/thelaw.asm"
 include "./images/piracy.asm"
 include "./images/itsa.asm"
 include "./images/crime.asm"
+include "./images/mid0.asm"
+include "./images/cursor.asm"
+include "./images/cursor_blank.asm"
+include "./images/cursor_click.asm"
+include "./images/mid1.asm"
+include "./images/mid2.asm"
