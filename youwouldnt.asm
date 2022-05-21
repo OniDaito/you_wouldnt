@@ -43,13 +43,6 @@ start
     call advance_music
     call advance_music
     call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
     call clearscreen
     call advance_music
     call advance_music
@@ -74,6 +67,9 @@ start
     call clearscreen
     call advance_music
     call advance_music
+    call draw_mid3
+    call advance_music
+    call clearscreen
     ; Should be halfway through the music ideally
 	ld e,250
     ld hl,0   
@@ -103,13 +99,7 @@ start
     call advance_music
     call advance_music
     call advance_music
-    call advance_music
-    call advance_music
-    call advance_music
     call clearscreen
-    call advance_music
-    call advance_music
-    call advance_music
     call advance_music
     call advance_music
     call advance_music
@@ -178,5 +168,12 @@ include "./images/mid0.asm"
 include "./images/cursor.asm"
 include "./images/cursor_blank.asm"
 include "./images/cursor_click.asm"
+include "./images/zed.asm"
+include "./images/ripple.asm"
+include "./images/rod.asm"
+include "./images/bcright.asm"
+include "./images/bcleft.asm"
+include "./images/plus.asm"
+include "./images/equals.asm"
 include "./images/mid1.asm"
 include "./images/mid2.asm"
