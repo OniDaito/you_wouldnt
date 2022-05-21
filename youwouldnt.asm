@@ -8,7 +8,7 @@ start
     ld a, black | white | bright
     call cls_attributes
     call clearscreen
-   	ld hl,noteGS1
+    ld hl,noteGS1
     ld b, 512
     call bend_loop
     call start_music
@@ -108,12 +108,37 @@ start
     call advance_music
     call advance_music
     call scene07
-    ;ld hl,noteG0
-    ;ld b, 512
-    ;call bend_loop
-    ;ld e,250
-    ;ld hl,0   
-    ;call noise
+    call advance_music
+    call advance_music
+    call advance_music  
+    ld hl,noteG0
+    ld b, 512
+    call bend_loop
+    ld e,250
+    ld hl,0   
+    call noise
+    call clearscreen
+    call pausescene
+    call write_release
+    call pausescene
+    call pausescene
+    call pausescene
+    call write_date
+    call pausescene
+    call write_emf
+    call pausescene
+    call pausescene
+    call write_graphics_creds
+    call pausescene
+    call pausescene
+    call write_music_creds
+    call pausescene
+    call pausescene
+    call write_greets
+    call pausescene
+    call pausescene
+    call pausescene
+    call clearscreen
     ret
 
 ; This sets attributes for the whole screen
@@ -177,3 +202,4 @@ include "./images/plus.asm"
 include "./images/equals.asm"
 include "./images/mid1.asm"
 include "./images/mid2.asm"
+include "final.asm"
