@@ -47,7 +47,7 @@ write_exit:
     ret
 
 release_text:
-    defb "         You'wouldn't..."
+    defb "         You wouldn't..."
     defb 13, 13, 13, 0 
 
 date_text:
